@@ -1,21 +1,45 @@
 $(function(){
 
-// var maxH = stage.height
-// var maxW = stage.width
+
 
 
 
     console.log('The dom is ready! (drill 2)');
 
     $(document).on('keyup',function(event){
+    	var key = event.which
+    //output to console which key was pressed
+        console.log('The user pressed key: ',event.which);
+
 
 // up
-    	if (event.keyCode === 38){
-    		(".shape").animate({"top": "200"})
+    	if (key === 38){
+    		$('.shape').animate({
+    			'top' : '-=30'
+    		}, 'slow')
     	}
-        //output to console which key was pressed
-        console.log('The user pressed key: ',event.which);
-    });
+// right
+    	else if(key === 39){
+    		$('.shape').animate({
+    			'right' : '-=30'
+    		}, 'slow')
+    	}
+// left
+    	else if(key === 37){
+    		$('.shape').animate({
+    			'right' : '-=30'
+    		}, 'slow')
+    	}
+// down
+    	else if(key === 40){
+    		$('.shape').animate({
+    			'right' : '-=30'
+    		}, 'slow')
+    	}
 
-});
 
+    }
+)}
+)
+  
+        
